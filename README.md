@@ -35,8 +35,8 @@ DIVIDE (
 )
 - Monthly Salary = SUM(HR_Analytics[MonthlyIncome])
 ## Data Visualizations
-![OneDrive](Pictures\Screenshots\Screenshot 2024-12-02 170915.png)
-![OneDrive](Pictures\Screenshots\Screenshot 2024-12-02 170936.png)
+![dashboard overview](screenshot.png)
+![dashboard overview](screenshot.png)
 ## interactivity and functionality to the dashboard in Power BI
 To add interactivity and functionality to the dashboard in Power BI, we need to use the Visualizations pane and the Fields pane. The Visualizations pane is where we can choose and modify the visualizations for our data, such as the type, the format, the style, the interactivity, and the functionality. The Fields pane is where we can drag and drop the fields from our data model to the visualizations, and define the roles and values of the fields, such as the axis, the legend, the value, the filter, etc. 
 
