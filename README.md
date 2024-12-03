@@ -16,17 +16,6 @@ Before diving into data, it’s crucial to align with your organization’s HR g
 ## Data Source
 The file contains data related to HR analytics, with 1,480 rows and 38 columns. The dataset contains the following columns: EmpID, Age, AgeGroup, Attrition, BusinessTravel, DailyRate, Department, DistanceFromHome, Education, EducationField, EmployeeCount, EmployeeNumber, EnvironmentSatisfaction, Gender, HourlyRate, JobInvolvement, JobLevel, JobRole, JobSatisfaction, MaritalStatus, MonthlyIncome, SalarySlab, MonthlyRate, NumCompaniesWorked, Over18, OverTime, PercentSalaryHike, PerformanceRating, RelationshipSatisfaction, StandardHours, StockOptionLevel, TotalWorkingYears, TrainingTimesLastYear, WorkLifeBalance, YearsAtCompany, YearsInCurrentRole, YearsSinceLastPromotion, and YearsWithCurrManager.
 
-## Data Transformation (Power Query)
-Data cleaning and transformation steps:
-- Promoted headers: At the beginning the headers were not set. The headers were occupied in first row. So, to promote headers from row 1 we used “Use First Row as Headers” option under Transform tab. 
-- Split Column by Delimiter: The Hire Date was in MM/DD/YYYY format. To separate them into 3 different columns “Split column” is used by right clicking on column header. 
-- Reordered Columns: The columns were reordered such that it is ordered as DD MM YYYY. 
-- Merged Columns: Date column, Month column and Year column were merged together and named “Date” 
-- A new column “ID” is created combining Last name and Salary. This is done by selecting both columns clicking ctrl key and then right click -> Add Columns from Examples -> Type the way we need the id look like (eg: horn89900) and hit Enter.
--  Replaced values in “Years in current role” and “Years since last promotion”  so as to convert it to number format. 
-- Converted “Performance Rating” to a range of 1 to 4
-- Changed Type: This done by clicking ctrl+A to select whole data -> Transform tab -> Detect data type
-
 ## DAX Measures
 To define the KPIs and DAX measures in Power BI, we need to use the Modeling tab and the DAX language. The Modeling tab is where we can create and manage the KPIs and DAX measures in our data model. The DAX language is the formula language that we use to define the logic and calculation of the KPIs and DAX measures. 
 - Attrition Count = CALCULATE([Employee Count], HR_Analytics[Attrition]="Yes")
